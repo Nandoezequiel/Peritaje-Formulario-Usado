@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revisión Vehículo — Videsol</title>
+<title>Revisión de Vehículo — Formulario de Usado</title>
 <link rel="icon" type="image/png" href="icono.png">
 <link rel="apple-touch-icon" href="icono.png">
 <link rel="shortcut icon" href="icono.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 :root{
-  --gn:#1c4a32;--gnl:#e8f2ec;--gnm:#2d6b4a;
+  --gn:#1f2933;--gnl:#eef1f4;--gnm:#52606d;
   --bg:#f0ede6;--sf:#fff;--sf2:#f7f5f0;
   --bd:#e0ddd5;--bd2:#ccc9bf;
   --tx:#1a1a14;--tx2:#5a5a4e;--tx3:#9a9a8a;
@@ -128,19 +128,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
   .hdr,.main,.ov{display:none!important;}
   #print-summary{display:block!important;font-family:Arial,sans-serif;font-size:8.5pt;color:#111;}
 
-  .ps-head{border-bottom:2pt solid #1c4a32;padding-bottom:4pt;margin-bottom:5pt;display:flex;justify-content:space-between;align-items:baseline;}
-  .ps-head h1{font-size:12pt;font-weight:700;color:#1c4a32;}
+  .ps-head{border-bottom:2pt solid #1f2933;padding-bottom:4pt;margin-bottom:5pt;display:flex;justify-content:space-between;align-items:baseline;}
+  .ps-head h1{font-size:12pt;font-weight:700;color:#1f2933;}
   .ps-head p{font-size:8pt;color:#555;}
-  .ps-sec{background:#1c4a32;color:#fff;font-size:7pt;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2pt 5pt;margin:4pt 0 2pt;}
+  .ps-sec{background:#1f2933;color:#fff;font-size:7pt;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2pt 5pt;margin:4pt 0 2pt;}
   .ps-g2{display:grid;grid-template-columns:1fr 1fr;gap:1pt 10pt;margin-bottom:2pt;}
   .ps-g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1pt 6pt;margin-bottom:2pt;}
   .ps-field{font-size:8pt;line-height:1.4;}
-  .ps-field b{color:#1c4a32;}
+  .ps-field b{color:#1f2933;}
   .ps-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 10pt;}
   .ps-col-title{font-size:7pt;font-weight:700;color:#333;text-transform:uppercase;letter-spacing:.06em;border-bottom:1pt solid #ddd;padding-bottom:1pt;margin-bottom:2pt;margin-top:3pt;}
   .ps-item{font-size:7.5pt;line-height:1.5;padding-left:8pt;position:relative;}
   .ps-item::before{content:'•';position:absolute;left:0;color:#c0392b;font-weight:700;}
-  .ps-ok{font-size:7.5pt;color:#1c4a32;font-style:italic;padding-left:8pt;}
+  .ps-ok{font-size:7.5pt;color:#1f2933;font-style:italic;padding-left:8pt;}
   .ps-neum{display:grid;grid-template-columns:repeat(4,1fr);gap:2pt;margin-bottom:2pt;}
   .ps-tire{border:1pt solid #999;border-radius:2pt;padding:2pt 3pt;text-align:center;font-size:7pt;}
   .ps-tire b{display:block;font-size:6pt;color:#777;margin-bottom:1pt;}
@@ -149,9 +149,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
   .ps-tire.cambiar{background:#c0392b;color:#fff;border-color:#922b21;}
   .ps-obs{font-size:8pt;line-height:1.5;border:1pt solid #ddd;padding:3pt 5pt;border-radius:2pt;min-height:16pt;}
   .ps-econ{display:grid;grid-template-columns:1fr 1fr;gap:4pt;margin-top:4pt;}
-  .ps-econ-box{border:1.5pt solid #1c4a32;border-radius:3pt;padding:3pt 6pt;}
+  .ps-econ-box{border:1.5pt solid #1f2933;border-radius:3pt;padding:3pt 6pt;}
   .ps-econ-box span{font-size:7pt;color:#555;display:block;}
-  .ps-econ-box strong{font-size:11pt;font-weight:700;color:#1c4a32;}
+  .ps-econ-box strong{font-size:11pt;font-weight:700;color:#1f2933;}
   .ps-firma{display:grid;grid-template-columns:1fr 1fr;gap:20pt;margin-top:5pt;padding-top:4pt;border-top:1pt solid #bbb;}
   .ps-firma-item{font-size:8pt;}
   .ps-firma-line{border-bottom:1pt solid #555;height:14pt;margin-top:2pt;}
@@ -161,7 +161,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);min-h
 <body>
 
 <div class="hdr">
-  <div class="hdr-logo">Videsol <span>Automotora</span></div>
+  <div class="hdr-logo">Peritaje <span>Formulario de Usado</span></div>
   <div class="hdr-date" id="hdr-date"></div>
 </div>
 
@@ -586,7 +586,7 @@ function buildPrintSummary(){
   tireHTML+='</div>';
 
   var h='';
-  h+='<div class="ps-head"><h1>VIDESOL &mdash; Revisión de Vehículo en Permuta</h1><p>'+fecha+'&nbsp;&nbsp;&middot;&nbsp;&nbsp;Vendedor: '+esc(gs('f-vend')||'—')+'</p></div>';
+  h+='<div class="ps-head"><h1>Revisión de Vehículo en Permuta</h1><p>'+fecha+'&nbsp;&nbsp;&middot;&nbsp;&nbsp;Vendedor: '+esc(gs('f-vend')||'—')+'</p></div>';
 
   h+='<div class="ps-sec">Datos del vehículo</div>';
   h+='<div class="ps-g3">';
@@ -739,13 +739,13 @@ function row2(label,value){
   return'<w:tr><w:trPr><w:trHeight w:val="280"/></w:trPr>'+cell(label,true,'EBF3EC')+cell(value,false,'')+'</w:tr>';
 }
 function escW(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function secH(t){return'<w:p><w:pPr><w:spacing w:before="100" w:after="40"/><w:shd w:val="clear" w:color="auto" w:fill="1c4a32"/></w:pPr><w:r><w:rPr><w:b/><w:color w:val="FFFFFF"/><w:sz w:val="17"/><w:szCs w:val="17"/><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/></w:rPr><w:t>'+escW(t)+'</w:t></w:r></w:p>';}
+function secH(t){return'<w:p><w:pPr><w:spacing w:before="100" w:after="40"/><w:shd w:val="clear" w:color="auto" w:fill="1f2933"/></w:pPr><w:r><w:rPr><w:b/><w:color w:val="FFFFFF"/><w:sz w:val="17"/><w:szCs w:val="17"/><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/></w:rPr><w:t>'+escW(t)+'</w:t></w:r></w:p>';}
 
 function buildDocXml(c){
   var tbl=function(ct){return'<w:tbl><w:tblPr><w:tblW w:w="9000" w:type="dxa"/><w:tblBorders><w:top w:val="single" w:sz="2" w:color="CCCCCC"/><w:left w:val="single" w:sz="2" w:color="CCCCCC"/><w:bottom w:val="single" w:sz="2" w:color="CCCCCC"/><w:right w:val="single" w:sz="2" w:color="CCCCCC"/><w:insideH w:val="single" w:sz="2" w:color="CCCCCC"/><w:insideV w:val="single" w:sz="2" w:color="CCCCCC"/></w:tblBorders></w:tblPr>'+ct+'</w:tbl>';};
   var sp='<w:p><w:pPr><w:spacing w:before="0" w:after="80"/></w:pPr></w:p>';
   var body='';
-  body+='<w:p><w:pPr><w:spacing w:before="0" w:after="80"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/><w:color w:val="1c4a32"/></w:rPr><w:t>VIDESOL AUTOMOTORA</w:t></w:r><w:r><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/><w:color w:val="888888"/></w:rPr><w:t xml:space="preserve">     ·     Revisión de vehículo en permuta</w:t></w:r></w:p>';
+  body+='<w:p><w:pPr><w:spacing w:before="0" w:after="80"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/><w:color w:val="1f2933"/></w:rPr><w:t>PERITAJE · FORMULARIO DE USADO</w:t></w:r><w:r><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/><w:color w:val="888888"/></w:rPr><w:t xml:space="preserve">     ·     Revisión de vehículo en permuta</w:t></w:r></w:p>';
   body+='<w:p><w:pPr><w:spacing w:before="0" w:after="120"/></w:pPr><w:r><w:rPr><w:sz w:val="17"/><w:szCs w:val="17"/><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/><w:color w:val="555555"/></w:rPr><w:t xml:space="preserve">Fecha: '+escW(c.fecha)+'     ·     Vendedor: '+escW(c.vendedor)+'</w:t></w:r></w:p>';
   body+=secH('Datos del vehículo');
   body+=tbl(row2('Cliente',c.nombre)+row2('Marca / Modelo',c.marca+' '+c.modelo+' '+c.anio)+row2('Matrícula',c.matricula)+row2('Padrón',c.padron)+row2('Color',c.color)+row2('Kilometraje',c.km)+row2('Km último cambio distrib.',c.distrib)+row2('Gasto previsto',c.gasto)+row2('Valor acordado de permuta',c.permuta));
